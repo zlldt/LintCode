@@ -10,22 +10,22 @@ public:
         int count = 0;
         int number = 0;
         for ( ; number < n+1 ; number++ ){
-            if ( number == k)
+            if ( number == k)
             count++;
             if (number>=10){
-            if ( (number/10) == k)
+            if ( (number/10) == k)
             count++;
             }
             if(number>=100){
-            if ( (number/100) == k)
+            if ( (number/100) == k)
             count++;
             }
             if(number>=1000){
-            if ( (number/1000) == k)
+            if ( (number/1000) == k)
             count++;
             }
             if(number>=10000){
-            if ( (number/10000) == k)
+            if ( (number/10000) == k)
             count++;
             }
         }
