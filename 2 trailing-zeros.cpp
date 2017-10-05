@@ -6,7 +6,7 @@ public:
      */
     long long trailingZeros(long long n) {
             //return n/5+n/100+n/1000+n/10000;
-
+/*
     long long count=0,max=n;
     long long divide=1;
     for(;max>5;max=max/5)
@@ -18,6 +18,12 @@ public:
         count+=n/divide;
     }
     return count;
-
+*/
+    long long count=0,max=n;
+    for(;max>4;max=max/5)
+    {
+        count+=max/5;
+    }
+    return count;
     }
 };
