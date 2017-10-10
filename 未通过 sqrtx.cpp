@@ -8,8 +8,8 @@ public:
         // write your code here
         int sqrt_base=1;
         sqrt_base=x/2;
-        while(x>1000000)
-            sqrt_base=1000;
+        while(x>4000000)
+            sqrt_base=2000;
         while( sqrt_base*sqrt_base > x )
         {
             sqrt_base/=2;
