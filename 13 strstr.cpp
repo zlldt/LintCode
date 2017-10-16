@@ -7,15 +7,40 @@ public:
      */
     int strStr(const char *source, const char *target) {
         // write your code here
+/*
+        if(source_length==0 && target_length==0)
+            return 0;
+        if(source_length==0)
+            return -1;
+
+        for(;source[source_count+target_length];source_count++)
+        {
+            target_count=0;
+            correct=0;
+            for(;target_count<target_length;target_count++)
+            {
+            if(source[source_count+target_count]==target[target_count])
+                correct++;
+            }
+            if(correct==target_length)
+            return source_count;
+        }
+        return -1;
+*/
     int source_length=0,target_length=0;
     int source_count=0,target_count=0;
     int correct=0;
+    if (target==NULL)
+        return -1;
+    if ((source ==NULL) &&( target != NULL)) {
+         return -1;
+    }
     source_length=strlen(source);
     target_length=strlen(target);
     
     if(source_length==0 && target_length==0)
         return 0;
-    if(source_length==0)
+    if(source_length==0 && target_length>0)
         return -1;
 
     for(source_count=0;source_count+target_length<=source_length;source_count++)
