@@ -20,7 +20,7 @@ public:
         return false;
         while(n>2){
             if(n==3||n==4||n==5)
-        	return 0;
+        	return false;
             n=calc(n);
         }
         if(n!=1)
