@@ -10,7 +10,7 @@ class Solution:
         factor=1
         value = B
         while value> A:
-            factor=(value*factor)%10
+            factor=((value%10)*factor)%10
             if int(factor)==0:
                 return int(factor)
             value-=1
