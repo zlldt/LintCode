@@ -1,0 +1,22 @@
+class Solution:
+    """
+    @param: nums: The integer array you should partition
+    @param: k: An integer
+    @return: The index after partition
+    """
+    def partitionArray(self, nums, k):
+        # write your code here
+        start, end = 0, len(nums) - 1
+        count = 0
+        while start <= end:
+            while start <= end and nums[start] < k:
+                start += 1
+                count += 1
+            while start <= end and nums[start]>=k and nums[end]>=k:
+                end -= 1
+            while start <= end and nums[start]>=k and nums[end]<k:
+                nums[start], nums[end] = nums[end], nums[start]
+                start += 1
+                count += 1
+                end -= 1
+        return count
